@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var rollButton: UIButton!
     
+  
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        // Do any additional setup after loading the view.
@@ -27,10 +28,23 @@ class ViewController: UIViewController {
 //        diceImageViewTwo.alpha = 0.9
 //    }
 
+    
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        mainView.backgroundColor = #colorLiteral(red: 0, green: 0.7066929936, blue: 0.2558993399, alpha: 1)
-        rollButton.backgroundColor = #colorLiteral(red: 0.4875617623, green: 0.09158249944, blue: 0.0982972309, alpha: 1)
-        rollButton.setTitle("ROLL", for: .normal)
+     
+        mainView.backgroundColor = #colorLiteral(red: 0.008770671673, green: 0.7166469693, blue: 0.002310670679, alpha: 1)
+
+        let font = UIFont.systemFont(ofSize: 40, weight: .bold)
+        let attributes = [NSAttributedString.Key.font: font]
+        let attrTitle = NSAttributedString(string: "ROLL", attributes: attributes)
+        
+        rollButton.setAttributedTitle(attrTitle, for: UIControl.State.normal)
+        
+        
+        rollButton.configuration?.cornerStyle = .capsule
+        
+       
+        rollButton.configuration?.background.backgroundColor = #colorLiteral(red: 0.4383858442, green: 0.1353131533, blue: 0.08916733414, alpha: 1)
+       
         
         let arrayOfCubes = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
      
@@ -38,10 +52,17 @@ class ViewController: UIViewController {
         diceImageViewTwo.image = arrayOfCubes.randomElement()
         
         if diceImageViewOne.image == diceImageViewTwo.image {
-            rollButton.backgroundColor = #colorLiteral(red: 0.8467723131, green: 0.1409481764, blue: 0.1684038639, alpha: 1).withAlphaComponent(0.8)
             
-            rollButton.setTitle("SIMILARITY", for: .normal)
             mainView.backgroundColor = #colorLiteral(red: 0.6235027313, green: 1, blue: 0.6500176787, alpha: 1)
+
+            rollButton.configuration?.cornerStyle = .capsule
+            rollButton.configuration?.background.backgroundColor = #colorLiteral(red: 0, green: 0.7066929936, blue: 0.2558993399, alpha: 1)
+            
+            let font = UIFont.systemFont(ofSize: 30, weight: .bold)
+            let attributes = [NSAttributedString.Key.font: font, ]
+            let attrTitle = NSAttributedString(string: "Similarity", attributes: attributes)
+            
+            rollButton.setAttributedTitle(attrTitle, for: UIControl.State.normal)
             print("Similarity")
             
         } else {

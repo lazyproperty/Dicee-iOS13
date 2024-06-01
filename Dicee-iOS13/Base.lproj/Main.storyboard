@@ -59,28 +59,46 @@
                                             <constraint firstItem="aWb-Zc-2qo" firstAttribute="centerY" secondItem="f2N-9Z-7Wx" secondAttribute="centerY" id="5qL-t8-4cI"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-LY-X3c" userLabel="Bottom View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-LY-X3c" userLabel="Bottom View">
                                         <rect key="frame" x="0.0" y="565.5" width="414" height="282.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-Jp-rHK">
-                                                <rect key="frame" x="107" y="102" width="200" height="78"/>
-                                                <color key="backgroundColor" red="0.44705885649999999" green="0.1294117719" blue="0.1176470518" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-Jp-rHK">
+                                                <rect key="frame" x="132" y="102" width="150" height="78"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="78" id="8Ka-Bb-msP"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Uu3-Vt-SjJ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Uu3-Vt-SjJ"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="39"/>
                                                 <color key="tintColor" red="0.83529412749999998" green="0.87450981139999995" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="ROLL"/>
+                                                <state key="normal" title="ROLL">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="ROLL">
+                                                            <attributes>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="41" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <buttonConfiguration key="configuration" style="plain" title="ROLL" subtitle="" cornerStyle="capsule" titleAlignment="automatic">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.40392160420000001" green="0.15686275059999999" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8r9-rd-eTb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="GKy-Jp-rHK" firstAttribute="centerX" secondItem="tpj-LY-X3c" secondAttribute="centerX" id="K9o-Du-ZJe"/>
-                                            <constraint firstItem="GKy-Jp-rHK" firstAttribute="centerY" secondItem="tpj-LY-X3c" secondAttribute="centerY" id="lJY-o6-42o"/>
+                                            <constraint firstItem="GKy-Jp-rHK" firstAttribute="centerX" secondItem="tpj-LY-X3c" secondAttribute="centerX" id="23a-0Y-ffA"/>
+                                            <constraint firstItem="GKy-Jp-rHK" firstAttribute="centerY" secondItem="tpj-LY-X3c" secondAttribute="centerY" id="jOJ-Jv-NGO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -105,12 +123,12 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="t4F-3a-yZG" secondAttribute="bottom" id="3jE-5K-yKc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZwJ-BN-vJu" secondAttribute="trailing" id="GlF-6d-0Tj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t4F-3a-yZG" secondAttribute="trailing" id="I2m-IE-x6E"/>
+                            <constraint firstAttribute="trailing" secondItem="t4F-3a-yZG" secondAttribute="trailing" id="I2m-IE-x6E"/>
                             <constraint firstItem="ZwJ-BN-vJu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SPE-lT-7cz"/>
                             <constraint firstItem="t4F-3a-yZG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ygm-lx-7Hu"/>
                             <constraint firstItem="ZwJ-BN-vJu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="efm-um-6hZ"/>
                             <constraint firstAttribute="bottom" secondItem="ZwJ-BN-vJu" secondAttribute="bottom" id="xBJ-WW-GAw"/>
-                            <constraint firstItem="t4F-3a-yZG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yE6-mW-ihl"/>
+                            <constraint firstItem="t4F-3a-yZG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yE6-mW-ihl"/>
                         </constraints>
                     </view>
                     <connections>
